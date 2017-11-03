@@ -1,0 +1,18 @@
+{% extends '::base.html.twig' %}
+
+       {% block stylesheets %}
+           {{ parent() }}
+       {% endblock %}
+
+
+{% block body %}
+    <h1 class="test">Partie n°1</h1>
+
+    {% block javascripts %}
+        {{ parent() }}
+    {% endblock %}
+
+{% endblock %}
+
+
+
