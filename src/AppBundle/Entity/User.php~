@@ -55,4 +55,9 @@ class User extends BaseUser
     {
         return $this->gender;
     }
+
+    /**
+    * @ORM\OneToOne(targetEntity="AppBundle\Entity\Statistic", cascade={"persist"})
+    */
+    private $statistic;
 }

@@ -4,5 +4,10 @@
     <h1>Mon profil de {{ user }}</h1>
     <p>{{ 'profile.show.username'|trans }}: {{ user.username }}</p>
     <p>{{ 'profile.show.email'|trans }}: {{ user.email }}</p>
-    <p>{{ 'Sexe'|trans }}: {{ user.gender }}</p>
+    <p>Les Dieux m\'ont fait(e) {{ user.gender }}</p>
+
+    <div>
+        <a href="{{ path('stat') }}">Voir mes statistiques</a>
+    </div>
+
 </div>

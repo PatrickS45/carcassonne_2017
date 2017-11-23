@@ -1,0 +1,39 @@
+{% extends '::base.html.twig' %}
+
+       {% block stylesheets %}
+           {{ parent() }}
+       {% endblock %}
+
+
+{% block body %}
+    <h1 class="test">Mes Statistiques</h1>
+
+    {% for statistic in statistics %}
+        <p>Parties jouées : {{ statistic.play }}</p>
+        <p>Score total : {{ statistic.score }}</p>
+        <p>Score moyen par partie : {{ statistic.scoreAverage }}</p>
+        <p>Victoire(s) : {{ statistic.victory }}</p>
+        <p>Défaites(s) : {{ statistic.defeat }}</p>
+        <p>Match nul(s) : {{ statistic.draw }}</p>
+        <p>Villes : {{ statistic.city }}</p>
+        <p>Villes par partie : {{ statistic.cityAverage }}</p>
+        <p>Plus grande ville construite : {{ statistic.biggestCity }}</p>
+        <p>Ecus : {{ statistic.shield }}</p>
+        <p>Ecus par partie : {{ statistic.shieldAverage }}</p>
+        <p>Route : {{ statistic.road }}</p>
+        <p>Route par partie: {{ statistic.roadAverage }}</p>
+        <p>Plus grande route: {{ statistic.biggestRoad }}</p>
+        <p>Abbaye: {{ statistic.abbey }}</p>
+        <p>Abbaye par partie: {{ statistic.abbeyAverage }}</p>
+
+
+    {% endfor %}
+
+    {% block javascripts %}
+        {{ parent() }}
+    {% endblock %}
+
+{% endblock %}
+
+
+
